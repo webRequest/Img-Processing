@@ -12,6 +12,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Emgu.CV.UI, Version=4.2.0.3662, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.runtime.windows.4.2.0.3662\lib\net461\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World.NetStandard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.4.2.0.3662\lib\netstandard2.0\Emgu.CV.World.NetStandard.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +53,176 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Forms\AndForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Forms\AndForm.Designer.cs">
+      <DependentUpon>AndForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\BlendingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BlendingForm.Designer.cs">
+      <DependentUpon>BlendingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorForm.Designer.cs">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistogramFormMono.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistogramFormMono.Designer.cs">
+      <DependentUpon>HistogramFormMono.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistogramFormRgb.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistogramFormRgb.Designer.cs">
+      <DependentUpon>HistogramFormRgb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LeavingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LeavingForm.Designer.cs">
+      <DependentUpon>LeavingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MomentsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MomentsForm.Designer.cs">
+      <DependentUpon>MomentsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OperacjeMedianoweForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OperacjeMedianoweForm.Designer.cs">
+      <DependentUpon>OperacjeMedianoweForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrForm.Designer.cs">
+      <DependentUpon>OrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PowierzchniaObwodForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PowierzchniaObwodForm.Designer.cs">
+      <DependentUpon>PowierzchniaObwodForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrewittForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrewittForm.Designer.cs">
+      <DependentUpon>PrewittForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SaveForm.Designer.cs">
+      <DependentUpon>SaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UniOperLiniowaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\UniOperLiniowaForm.Designer.cs">
+      <DependentUpon>UniOperLiniowaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThresholdingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThresholdingForm.Designer.cs">
+      <DependentUpon>ThresholdingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WspolczynnikiKsztaltuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\WspolczynnikiKsztaltuForm.Designer.cs">
+      <DependentUpon>WspolczynnikiKsztaltuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\XorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\XorForm.Designer.cs">
+      <DependentUpon>XorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Library\IPALibrary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AndForm.resx">
+      <DependentUpon>AndForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BlendingForm.resx">
+      <DependentUpon>BlendingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ErrorForm.resx">
+      <DependentUpon>ErrorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistogramFormMono.resx">
+      <DependentUpon>HistogramFormMono.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistogramFormRgb.resx">
+      <DependentUpon>HistogramFormRgb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LeavingForm.resx">
+      <DependentUpon>LeavingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MomentsForm.resx">
+      <DependentUpon>MomentsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OperacjeMedianoweForm.resx">
+      <DependentUpon>OperacjeMedianoweForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrForm.resx">
+      <DependentUpon>OrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PowierzchniaObwodForm.resx">
+      <DependentUpon>PowierzchniaObwodForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrewittForm.resx">
+      <DependentUpon>PrewittForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SaveForm.resx">
+      <DependentUpon>SaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\UniOperLiniowaForm.resx">
+      <DependentUpon>UniOperLiniowaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThresholdingForm.resx">
+      <DependentUpon>ThresholdingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WspolczynnikiKsztaltuForm.resx">
+      <DependentUpon>WspolczynnikiKsztaltuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\XorForm.resx">
+      <DependentUpon>XorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +232,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -76,5 +247,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Emgu.CV.runtime.windows.4.2.0.3662\build\Emgu.CV.runtime.windows.targets" Condition="Exists('..\packages\Emgu.CV.runtime.windows.4.2.0.3662\build\Emgu.CV.runtime.windows.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Emgu.CV.runtime.windows.4.2.0.3662\build\Emgu.CV.runtime.windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Emgu.CV.runtime.windows.4.2.0.3662\build\Emgu.CV.runtime.windows.targets'))" />
+  </Target>
 </Project>

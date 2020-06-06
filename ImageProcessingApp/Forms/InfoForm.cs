@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ImageProcessingApp
+namespace ImageProcessingApp.Forms
 {
-    public partial class Form1 : Form
+    public partial class InfoForm : Form
     {
-        public Form1()
+        public InfoForm()
         {
             InitializeComponent();
+            ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
